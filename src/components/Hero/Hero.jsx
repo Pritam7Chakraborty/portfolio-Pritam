@@ -6,10 +6,10 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { Github, Linkedin } from 'lucide-react'; // Icons for social links
 
 function Hero() {
-  const resumeUrl = "/portfolio-client/src/assets/Pritam Chakraborty - Resume.pdf";
+  const resumeUrl = "/Pritam_Chakraborty_Resume.pdf";
 
   const [skills] = useTypewriter({
-    words: ['Full-Stack Developer', 'Java Specialist', 'React Enthusiast', 'Problem Solver'],
+    words: ['Web Developer', 'Java Specialist', 'React Enthusiast', 'Problem Solver'],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 60,
@@ -54,7 +54,7 @@ function Hero() {
           {/* --- Social Links --- */}
           <div className="flex items-center gap-6 mt-8 justify-center md:justify-start">
               <a href="https://github.com/Pritam7Chakraborty" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors"><Github size={32} /></a>
-              <a href="www.linkedin.com/in/pritam-chakraborty-090532273" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors"><Linkedin size={32} /></a>
+              <a href="https://www.linkedin.com/in/pritam-chakraborty-090532273" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors"><Linkedin size={32} /></a>
           </div>
         </div>
 
