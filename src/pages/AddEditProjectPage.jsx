@@ -17,7 +17,7 @@ const AddEditProjectPage = () => {
       const fetchProject = async () => {
         setIsLoading(true);
         try {
-          const response = await fetch(`http://localhost:5000/api/projects/${id}`);
+          const response = await fetch(`https://pritam-portfolio-api.onrender.com/api/projects/${id}`);
           const data = await response.json();
           setProjectData(data);
         } catch (error) {
@@ -36,8 +36,8 @@ const AddEditProjectPage = () => {
     const token = localStorage.getItem('token');
     const method = isEditing ? 'PUT' : 'POST';
     const url = isEditing
-      ? `http://localhost:5000/api/projects/${id}`
-      : 'http://localhost:5000/api/projects';
+      ? `https://pritam-portfolio-api.onrender.com/api/projects/${id}`
+      : 'https://pritam-portfolio-api.onrender.com/api/projects';
 
     try {
       await fetch(url, {

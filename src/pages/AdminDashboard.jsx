@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     const fetchProjects = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/projects');
+        const response = await fetch('https://pritam-portfolio-api.onrender.com/api/projects');
         const data = await response.json();
         setProjects(data.projects || []);
       } catch (error) {
@@ -27,7 +27,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this project?')) {
       const token = localStorage.getItem('token');
-      await fetch(`http://localhost:5000/api/projects/${id}`, {
+      await fetch(`https://pritam-portfolio-api.onrender.com/api/projects/${id}`, {
         method: 'DELETE',
         headers: { 'x-auth-token': token },
       });

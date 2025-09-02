@@ -18,7 +18,7 @@ const MyWork = () => {
     const fetchInitialProjects = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/projects?page=1&limit=6`
+          `https://pritam-portfolio-api.onrender.com/api/projects?page=1&limit=6`
         );
         const data = await response.json();
         if (data && data.projects) {
