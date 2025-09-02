@@ -6,7 +6,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { Github, Linkedin } from 'lucide-react'; // Icons for social links
 
 function Hero() {
-  const resumeUrl = "/Pritam Chakraborty - Resume.pdf";
+  const resumeUrl = "/portfolio-client/src/assets/Pritam Chakraborty - Resume.pdf";
 
   const [skills] = useTypewriter({
     words: ['Full-Stack Developer', 'Java Specialist', 'React Enthusiast', 'Problem Solver'],
