@@ -1,6 +1,6 @@
 // src/components/MyWork/MyWork.jsx
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -60,14 +60,11 @@ const MyWork = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 w-full items-center">
           <div className="lg:col-span-1 text-center lg:text-left">
             <div className="relative inline-block">
-              <h1 className="text-4xl md:text-5xl font-semibold">
-                My Latest Works
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-semibold">My Latest Works</h1>
               <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-gradient-to-r from-orange-500 to-fuchsia-500 rounded-full"></div>
             </div>
             <p className="text-lg text-neutral-300 leading-relaxed mt-6">
-              Here's a selection of my recent projects. Each one was a unique
-              challenge and a great learning experience.
+              Here's a selection of my recent projects. Each one was a unique challenge and a great learning experience.
             </p>
             <div className="hidden lg:flex gap-4 mt-8">
               <CarouselPrevious />
@@ -86,17 +83,17 @@ const MyWork = () => {
                     >
                       <div className="p-1">
                         <Card className="bg-neutral-900 border-neutral-800 transition-colors duration-300 group-hover:border-purple-500">
+                          {/* FIX 2: Removed items-start and justify-between */}
                           <CardContent className="flex flex-col gap-4 p-4">
                             <ProjectLinkWrapper project={project}>
-                              {/* --- MODIFIED SECTION --- */}
-                              <div className="w-full aspect-video overflow-hidden rounded-lg shadow-md">
+                              {/* FIX 1: Changed to a taller aspect ratio */}
+                              <div className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-md">
                                 <img
                                   src={project.imageUrl}
                                   alt={project.title}
                                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                               </div>
-                              {/* --- END MODIFIED SECTION --- */}
                             </ProjectLinkWrapper>
                             <h3 className="text-xl font-bold text-white">
                               {project.title}
