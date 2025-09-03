@@ -27,9 +27,8 @@ const About = () => {
           {/* Stats Section */}
           <div className="grid grid-cols-3 gap-8 w-full text-center">
             {[
-              { value: "2+", label: "Years of Experience" },
+              { value: "3+", label: "Years of Experience" },
               { value: "5+", label: "Projects Completed" },
-              { value: "0", label: "Happy Clients" },
             ].map((stat, index) => (
               <div key={index} className="flex flex-col">
                 <h2 className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
