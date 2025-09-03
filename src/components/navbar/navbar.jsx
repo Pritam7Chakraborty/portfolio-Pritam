@@ -22,13 +22,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleBgScroll);
   }, []);
 
-  // --- NEW: Effect for Scroll Spy ---
+  // Effect for Scroll Spy
   useEffect(() => {
     const handleScrollSpy = () => {
-      // Only run scroll spy on the homepage
       if (location.pathname !== '/') return;
-
-      const scrollPosition = window.scrollY + 150; // Offset for better accuracy
+      const scrollPosition = window.scrollY + 150;
       for (const item of navItems) {
         const element = document.getElementById(item);
         if (element && scrollPosition >= element.offsetTop && scrollPosition < element.offsetTop + element.offsetHeight) {
@@ -37,10 +35,9 @@ const Navbar = () => {
         }
       }
     };
-    
     window.addEventListener("scroll", handleScrollSpy);
     return () => window.removeEventListener("scroll", handleScrollSpy);
-  }, [location.pathname]); // Re-run only if pathname changes
+  }, [location.pathname]);
 
   const openMenu = () => { menuRef.current.style.right = "0"; setIsMenuOpen(true); };
   const closeMenu = () => { menuRef.current.style.right = "-350px"; setIsMenuOpen(false); };
@@ -58,7 +55,6 @@ const Navbar = () => {
                     ${isScrolled || location.pathname !== '/' ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}
       >
         <div className="flex items-center justify-between px-6 md:px-20 py-3 max-w-7xl mx-auto">
-          {/* --- FIX: Smart Logo Link --- */}
           {location.pathname === '/' ? (
             <AnchorLink href="#home" onClick={() => setMenu("home")}><img src={logo} alt="logo" className="w-16"/></AnchorLink>
           ) : (
@@ -83,7 +79,6 @@ const Navbar = () => {
             ))}
             <li><Link to="/login" className="text-neutral-300 hover:text-white transition">Admin</Link></li>
             <li>
-              {/* --- FIX: Smart Connect Button --- */}
               {location.pathname === '/' ? (
                 <AnchorLink href="#contact" className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-orange-500 text-white font-semibold hover:scale-105 transition-transform duration-300 block">Connect</AnchorLink>
               ) : (
@@ -93,6 +88,9 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
+      {/* --- SPACER DIV TO PREVENT CONTENT OVERLAP --- */}
+      <div className="h-[72px]"></div>
 
       {isMenuOpen && <div className="fixed inset-0 bg-black/60 z-40" onClick={closeMenu}></div>}
 
