@@ -9,7 +9,7 @@ function Hero() {
   const resumeUrl = "/Pritam_Chakraborty_Resume.pdf";
 
   const [skills] = useTypewriter({
-    words: ['Web Developer', 'Java Specialist', 'React Enthusiast', 'Problem Solver'],
+    words: ["MERN Developer", "Java Specialist", "Algorithmic Thinker", "React Enthusiast"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 60,
