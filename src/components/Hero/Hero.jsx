@@ -1,6 +1,6 @@
 // src/components/Hero/Hero.jsx
 import React from "react";
-import profile_img from "../../assets/hero.png";
+import profile_img from "../../assets/hero.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { Github, Linkedin } from 'lucide-react'; // Icons for social links
