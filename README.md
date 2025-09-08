@@ -2,7 +2,7 @@
 
 This is the frontend for my personal portfolio, built with **React** and **Vite**. It's a dynamic, fully responsive single-page application designed to showcase my skills, projects, and professional background.
 
-**➡️ [Live Demo](https://your-portfolio-url.vercel.app/)** | **➡️ [Backend Repository](https://github.com/Pritam7Chakraborty/portfolio-backend)**
+**➡️ [Live Demo]([https://your-portfolio-url.vercel.app/]** | **➡️ [Backend Repository](https://github.com/Pritam7Chakraborty/portfolio-backend)**
 
 ---
 
