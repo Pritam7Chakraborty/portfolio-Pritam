@@ -62,7 +62,7 @@ const Contact = () => {
               <img src={location_icon} alt="location icon" className="w-8 p-1.5 bg-neutral-800 rounded-full" />
               <span>West Bengal, India</span>
             </div>
-            <a href="https://linkedin.com/in/pritam-chakraborty" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+            <a href="www.linkedin.com/in/pritam-chakraborty-090532273" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
               <img src={linkedin_icon} alt="linkedin icon" className="w-8 p-1.5 bg-neutral-800 rounded-full" />
               <span className="group-hover:text-white transition-colors">linkedin.com/in/pritam-chakraborty</span>
             </a>
